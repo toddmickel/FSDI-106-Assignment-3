@@ -1,9 +1,9 @@
 class Task {
-  constructor(title, desc, important, dateDue, alertText, location) {
+  constructor(title, desc, important, dueDate, alertText, location) {
     this.title = title;
     this.description = desc;
     this.important = important;
-    this.dateDue = dateDue;
+    this.dueDate = dueDate;
     this.alertText = alertText;
     this.location = location;
 

@@ -92,7 +92,7 @@ function displayTask(task) {
         ${task.location}
       </div>
       <div class="due-date">
-        ${task.dateDue}
+        ${task.dueDate}
       </div>
       <div class="del-btn-cont">
         <button class="btn btn-dark btn-sm" onclick="delTask(${idx})">Delete</button>
