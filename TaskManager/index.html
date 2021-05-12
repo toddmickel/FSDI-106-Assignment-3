@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/styles/app.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <main class="container-fluid">
+
+        <section id="details">
+            <h3>Task Information</h3>
+            <div class="control">
+                <label for="id-num">ID:</label>
+                <input type="text" name="id-num" id="txtId" class="form-control" readonly>
+            </div>
+
+            <div class="control">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="txtTitle" class="form-control">
+            </div>
+
+            <div class="control">
+                <label for="desc">Description</label>
+                <textarea name="desc" rows="4" id="txtDesc" class="form-control"></textarea>
+            </div>
+
+            <div class="control">
+                <label for="important">Important</label>
+                <i class="far fa-star" id="imp-star"></i> <!-- fas = solid fill; far = not filled-->
+            </div>
+
+            <div class="control">
+                <label for="due">Due Date</label>
+                <input type="datetime-local" name="due" id="dateDue" class="form-control">
+            </div>
+
+            <div class="control">
+                <label for="alert">Alert Text</label>
+                <select name="alert" id="selAlert" class="form-control">
+                    <option value="1">Don't forget to:</option>
+                    <option value="2">Stop:</option>
+                    <option value="3">Start:</option>
+                    <option value="4">Get more coffee and then:</option>
+                </select>
+            </div>
+
+            <div class="control">
+                <label for="location">Location</label>
+                <input type="text" name="location" id="txtLocation" class="form-control">
+            </div>
+
+            <div class="control">
+                <button class="btn btn-dark" id="save-btn">Save Task</button>
+            </div>
+
+        </section>
+
+        <section id="list">
+            <h3>Your Pending Tasks</h3>
+
+            <button class="btn btn-dark btn-sm" id="details-btn">Show/Hide Details</button>
+            <div id="tasksContainer" class="task-list">
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="/scripts/class.js"></script>
+    <script src="/scripts/app.js"></script>
+</body>
+</html>
